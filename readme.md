@@ -42,6 +42,7 @@ Pour optimiser une fonction :
 
 		n_particles est le nombre de particules qui recherchent l'optimum
 		n_moves est le nombre de mouvements autorisés par particule
+
 		optimize() est la version séquentielle
 		optimize_omp() est la version parallélisée
 
