@@ -1,10 +1,6 @@
 # Particle Swarm Optimization
 
-Par Yves de Verdiere, Céline Lepicard, Damien Lésignac
-
-
 Dans un terminal à partir du dossier "pso"
-
 		make clean	: nettoie le dossier source
 		make		: compile le programme
 		./pso		: lance le programme
@@ -16,14 +12,12 @@ d'une fonction qui additionne ses trois paramètres allant de -1000 à 1000).
 Pour optimiser une fonction :
 	
 La fonction objectif doit avoir la signature suivante :
-
 		double f(int n_param, double * param)
 
 		n_param est le nombre de paramètres que prend la fonction
 		param est un tableau contenant les paramètres (tous de type double)
 
 Pour chaque paramètre de type double, instancier un objet de classe Domain :
-
 		Domain(double min, double max, int precision)
 
 		min est le minimum du domaine
@@ -31,7 +25,6 @@ Pour chaque paramètre de type double, instancier un objet de classe Domain :
 		precision est le nombre de valeurs que peut prendre le paramètre
 
 Instancier un objet de classe Optimizable :
-
 		Optimizable(double (*f)(int, double *), int n_param, Domain * d, ProblemType pt);
 
 		f est un pointeur qui pointe sur la fonction objectif
@@ -41,7 +34,6 @@ Instancier un objet de classe Optimizable :
 			enum class ProblemType { MIN, MAX }
 
 Une fois instancié, l'objet Optimizable peut appeler ses deux méthodes
-
 		void optimize(int n_particles, int n_moves);
 		void optimize_omp(int n_particles, int n_moves);
 
@@ -52,7 +44,5 @@ Une fois instancié, l'objet Optimizable peut appeler ses deux méthodes
 
 L'optimum trouvé est alors enregistré dans l'attribut optimum de la classe Optimizable
 
-Si un optimum potentiel a été trouvé alors l'attribut optimized est égal à true
-
-Sinon l'attribut optimized est égal à false.
+Si un optimum potentiel a été trouvé alors l'attribut optimized est égal à true, sinon l'attribut optimized est égal à false.
 
