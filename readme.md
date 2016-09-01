@@ -1,4 +1,4 @@
-Particle Swarm Optimization
+# Particle Swarm Optimization
 	Par Yves de Verdiere, Céline Lepicard, Damien Lésignac
 
 
